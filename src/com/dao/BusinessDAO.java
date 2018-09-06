@@ -41,7 +41,9 @@ public class BusinessDAO extends HibernateDaoSupport {
 			throw re;
 		}
 	}
-
+	
+	
+	
 	public void update(Business transientInstance) {
 		log.debug("updating Business instance");
 		try {

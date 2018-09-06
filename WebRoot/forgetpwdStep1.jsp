@@ -30,6 +30,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
 
+
 <!-- CSS
   ================================================== -->
 <link rel="stylesheet" href="styles/skeleton.css" />
@@ -37,6 +38,8 @@
 <link rel="stylesheet" href="styles/flexslider.css" />
 <link rel="stylesheet" href="styles/color.css" />
 <link rel="stylesheet" href="styles/layout.css" />
+
+
 
 <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -50,7 +53,11 @@
 	href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="114x114"
 	href="images/apple-touch-icon-114x114.png" />
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
 <script type="text/javascript">
 	function checkUserPhone() {
 		var phone = document.getElementById("user.userPhonenum").value;
@@ -69,8 +76,14 @@
 		}
 		document.getElementById("form").submit();
 	}
+	
 </script>
+
+
 <base href="<%=basePath%>">
+
+
+
 </head>
 
 
@@ -105,7 +118,9 @@
 				</div>
 			</div>
 			<!-- END HEADER -->
-			<div style="background: #EFEFEF;  width: 930px; height: 430px;" id="outerslider">
+			<div
+				style="background: #EFEFEF; border: #D8D8D8 solid black; width: 930px; height: 430px;"
+				id="outerslider">
 				<br />
 				<div style="text-align: center">
 					<img src="images/forgetpwd/step.png">
@@ -123,8 +138,9 @@
 							style="font-size: 12px; width: 250px; height: 35px; position: relative; top: 8px" />
 						<img title="点击可刷新验证码" src="getVCode"
 							onclick="this.src='getVCode?t=' + Math.random();"
-							style="width: 150px; height: 40px; position: relative; top: 20px; margin-left: auto" />
-						<br/>
+							style="width: 150px; height: 40px; position: relative; top: 20px; margin-left: auto" /><br />
+
+
 						<input type="button" name="next_step" onclick="checkUserPhone()"
 							value="下一步" style="position: relative; top: 30px" />
 					</div>
@@ -135,6 +151,8 @@
 	</div>
 </body>
 <!-- END SLIDER -->
+
+
 <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
 
 <!-- jQuery Superfish -->
@@ -152,15 +170,15 @@
 <script type="text/javascript" src="js/custom.js"></script>
 
 <script type="text/javascript">
-	jQuery(window).load(function() {
-		jQuery('.flexslider').flexslider({
-			animation : "fade", //String: Select your animation type, "fade" or "slide"
-			directionNav : false, //Boolean: Create navigation for previous/next navigation? (true/false)
-			controlNav : true
-		//Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-		});
-	});
-</script>
+					jQuery(window).load(function() {
+						jQuery('.flexslider').flexslider({
+							animation : "fade", //String: Select your animation type, "fade" or "slide"
+							directionNav : false, //Boolean: Create navigation for previous/next navigation? (true/false)
+							controlNav : true
+						//Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+						});
+					});
+				</script>
 </html>
 
 

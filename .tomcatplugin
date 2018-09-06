@@ -5,7 +5,7 @@
     <reloadable>true</reloadable>
     <redirectLogger>false</redirectLogger>
     <updateXml>true</updateXml>
-    <warLocation>d:\spdbvulgame.war</warLocation>
+    <warLocation>d:\spdbVULGame.war</warLocation>
     <extraInfo></extraInfo>
     <webPath></webPath>
 </tomcatProjectProperties>

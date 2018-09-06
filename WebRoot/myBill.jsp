@@ -43,21 +43,28 @@
 	function nextBtn() {
 		var ccpage = document.getElementsByName("currentPage")[0].value;
 		document.getElementsByName("currentPage")[0].value = parseInt(ccpage) + 1;
+
 		document.forms[0].submit();
 	}
 
 	function lastBtn() {
+
 		var ccpage = document.getElementsByName("currentPage")[0].value;
 		document.getElementsByName("currentPage")[0].value = parseInt(ccpage) - 1;
+
 		document.forms[0].submit();
 	}
 	function goToPage() {
-		document.getElementsByName("currentPage")[0].value = document.getElementById("assginedPage").value;
+
+		document.getElementsByName("currentPage")[0].value = document
+				.getElementById("assginedPage").value;
+
 		document.forms[0].submit();
 
 	}
 
 	function changePageSize() {
+
 		document.forms[0].submit();
 	}
 </script>
@@ -73,9 +80,20 @@
 	href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="114x114"
 	href="images/apple-touch-icon-114x114.png" />
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+
 <base href="<%=basePath%>">
+
+
+
 </head>
+
+
 <body>
 	<div id="bodychild">
 		<div id="outercontainer">
@@ -108,7 +126,9 @@
 				</div>
 			</div>
 			<!-- END HEADER -->
-			<div style="background: #EFEFEF;  width: 930px; height: 430px;" id="outerslider">
+			<div
+				style="background: #EFEFEF; border: #D8D8D8 solid black; width: 930px; height: 430px;"
+				id="outerslider">
 
 				<!-- SLIDER -->
 				<s:form action="bill!findUserBill.action">
@@ -147,8 +167,8 @@
 						<tr>
 							<td><input type="button" value="上一页" onclick="lastBtn()" /></td>
 							<td colspan="8">第<input type="text" id="assginedPage"
-								value='<s:property value="#request.currentPage"/>' />页
-								<a href="javascript:goToPage()">GO</a></td>
+								value='<s:property value="#request.currentPage"/>' />页 <a
+								href="javascript:goToPage()" />GO</a></td>
 							<td><input type="button" value="下一页" onclick="nextBtn()" /></td>
 							<td><s:select list="(10).{#this+1}" name="pageSize"
 									label="每页显示条数" onchange="changePageSize()"></s:select></td>

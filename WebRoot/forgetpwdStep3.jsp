@@ -39,9 +39,10 @@
 <link rel="stylesheet" href="styles/layout.css" />
 
 
+
 <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+	<![endif]-->
 
 <!-- Favicons
 	================================================== -->
@@ -160,7 +161,9 @@
 				</div>
 			</div>
 			<!-- END HEADER -->
-			<div style="background: #EFEFEF;  width: 930px; height: 430px;" id="outerslider">
+			<div
+				style="background: #EFEFEF; border: #D8D8D8 solid black; width: 930px; height: 430px;"
+				id="outerslider">
 				<br />
 				<div style="text-align: center">
 					<img src="images/forgetpwd/step3.png">

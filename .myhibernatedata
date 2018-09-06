@@ -19,6 +19,6 @@ sessionFactoryId=sessionFactory
 basePersistenceClass=
 genAnnotations=false
 reSettingsFile=
-configFile=/vulgame/src/applicationContext-bean.xml
+configFile=/dianxin2/src/applicationContext-bean.xml
 createConfigFile=false
 addLibs2Classpath=true

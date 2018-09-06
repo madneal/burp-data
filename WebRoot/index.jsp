@@ -135,7 +135,7 @@
 			</div>
 			<!-- END HEADER -->
 			<div
-				style="background-image: url('images/background.jpg');  width: 930px; height: 430px;"
+				style="background-image: url('images/background.jpg'); border: #D8D8D8 solid black; width: 930px; height: 430px;"
 				id="outerslider">
 
 				<!-- SLIDER -->

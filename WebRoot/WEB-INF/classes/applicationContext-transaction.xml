@@ -24,7 +24,8 @@
 	<aop:config>
         <aop:pointcut id="transactionMethod"
             expression="execution(* com.service.*.*(..))" />
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="transactionMethod" />
+        <aop:advisor advice-ref="txAdvice"
+            pointcut-ref="transactionMethod" />        
     </aop:config>    
 	
 	
