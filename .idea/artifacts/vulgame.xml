@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="vulgame">
+    <output-path>$PROJECT_DIR$/out/artifacts/vulgame</output-path>
+    <root id="archive" name="vulgame.war" />
+  </artifact>
+</component>
