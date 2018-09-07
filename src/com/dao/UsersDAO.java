@@ -220,9 +220,13 @@ public class UsersDAO extends HibernateDaoSupport {
 	 * @param id
 	 * @return
 	 */
+	// 1.1 Sql injection
+	// Author: Dong Bing
 	public Users findByStringId(String id) {
-		String hql="from Users  where user_id='"+ id+"'";
+//		String hql="from Users  where user_id='"+ id+"'";
+		String hql = "from Users where user_id=:id";
 		Query query=getSession().createQuery(hql);
+		query.setString("id", id);
 		Users user = (Users)query.uniqueResult();	
 		return user;
 	}

@@ -172,9 +172,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		form.append(input);
 		form.submit();
 	});
-	
-	
-	
+
 </script>	
 </html>
 
