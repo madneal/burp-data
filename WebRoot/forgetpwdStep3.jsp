@@ -162,7 +162,7 @@
 			</div>
 			<!-- END HEADER -->
 			<div
-				style="background: #EFEFEF; border: #D8D8D8 solid black; width: 930px; height: 430px;"
+				style="background: #EFEFEF;width: 930px; height: 430px;"
 				id="outerslider">
 				<br />
 				<div style="text-align: center">

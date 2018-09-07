@@ -18,7 +18,7 @@
 			<ref bean="sessionFactory"/>
 		</property>
 	</bean>
-	
+
 	<!-- 配置使用事务的方法 -->
 	
 	<aop:config>

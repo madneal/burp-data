@@ -52,24 +52,12 @@
 	href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="114x114"
 	href="images/apple-touch-icon-114x114.png" />
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-
-
 <base href="<%=basePath%>">
-
-
-
 </head>
-
-
 <body>
 	<div id="bodychild">
 		<div id="outercontainer">
-
 			<!-- HEADER -->
 			<div id="outerheader">
 				<div class="container">
@@ -135,7 +123,7 @@
 			</div>
 			<!-- END HEADER -->
 			<div
-				style="background-image: url('images/background.jpg'); border: #D8D8D8 solid black; width: 930px; height: 430px;"
+				style="background-image: url('images/background.jpg');width: 930px; height: 430px;"
 				id="outerslider">
 
 				<!-- SLIDER -->
@@ -146,7 +134,6 @@
 				<%-- 				<s:if test="flag==4 || null==#session.userId || #session.userId.isEmpty()"> --%>
 				<form id="loginform" method="post">
 					<table style="border: 0;">
-
 						<s:if test="flag==1">
 							<h3 style="color: red" align="center">用户名或密码错误!</h3>
 						</s:if>
@@ -177,7 +164,6 @@
 								onclick="checkPhoneNum()" /> <input type="button" value="忘记密码"
 								onclick="javascript:window.location.href='forgetpwdStep1.jsp'" />
 							</td>
-
 						</tr>
 						<td></td>
 						<td></td>
@@ -212,32 +198,32 @@
 <script type="text/javascript" src="js/custom.js"></script>
 
 <script type="text/javascript">
-				jQuery(window).load(function() {
-					jQuery('.flexslider').flexslider({
-						animation : "fade", //String: Select your animation type, "fade" or "slide"
-						directionNav : false, //Boolean: Create navigation for previous/next navigation? (true/false)
-						controlNav : true
-					//Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-					});
-				});
+	jQuery(window).load(function() {
+		jQuery('.flexslider').flexslider({
+			animation : "fade", //String: Select your animation type, "fade" or "slide"
+			directionNav : false, //Boolean: Create navigation for previous/next navigation? (true/false)
+			controlNav : true
+		//Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+		});
+	});
 
-				function checkPhoneNum() {
-					var phonenum = document.getElementById("phonenum").value;
-					var password = document.getElementById("password").value;
-					var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(19[0-9]{1})|(1[0-9]{2}))+\d{8})$/;
-					
-			    	if(!myreg.test(phonenum)) { 
-			    		alert('请输入正确的手机号码！'); 
-			    		document.getElementById("phonenum").value = ""; 
-			    		return false; 
-			    	}else if(password == ""){
-			    		alert('密码不可为空！'); 
-			    		return false; 
-					}else{
-			    		document.getElementById("loginform").action = "user!userLogin.action";
-						document.getElementById("loginform").submit();
-			    	}
-				}
+	function checkPhoneNum() {
+		var phonenum = document.getElementById("phonenum").value;
+		var password = document.getElementById("password").value;
+		var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(19[0-9]{1})|(1[0-9]{2}))+\d{8})$/;
+
+		if(!myreg.test(phonenum)) {
+			alert('请输入正确的手机号码！');
+			document.getElementById("phonenum").value = "";
+			return false;
+		}else if(password == ""){
+			alert('密码不可为空！');
+			return false;
+		}else{
+			document.getElementById("loginform").action = "user!userLogin.action";
+			document.getElementById("loginform").submit();
+		}
+	}
 				
-			</script>
+</script>
 </html>

@@ -16,7 +16,7 @@
 			value="jdbc:mysql://127.0.0.1:3306/vulgame?useUnicode=true&amp;characterEncoding=UTF-8&amp;autoReconnect=true">
 		</property>
 		<property name="username" value="root"></property>
-		<property name="password" value=""></property>
+		<property name="password" value="root++123"></property>
 	</bean>
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">

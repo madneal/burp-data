@@ -53,20 +53,9 @@
           href="images/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="114x114"
           href="images/apple-touch-icon-114x114.png" />
-
-
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-
-
     <base href="<%=basePath%>">
-
-
-
 </head>
-
-
 <body>
 <div id="bodychild">
     <div id="outercontainer">
@@ -100,7 +89,7 @@
         </div>
         <!-- END HEADER -->
         <div
-                style="background: #EFEFEF; border: #D8D8D8 solid black; width: 930px; height: 430px;"
+                style="background: #EFEFEF;width: 930px; height: 430px;"
                 id="outerslider">
 
             <!-- SLIDER -->
