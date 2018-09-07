@@ -160,8 +160,9 @@
 								name="user.userPassword" /></td>
 						</tr>
 						<tr>
-							<td colspan="10"><input type="submit" value="登录"
-								onclick="checkPhoneNum()" /> <input type="button" value="忘记密码"
+							<td colspan="10">
+								<input type="submit" value="登录" onclick="checkPhoneNum()"/>
+								<input type="button" value="忘记密码"
 								onclick="javascript:window.location.href='forgetpwdStep1.jsp'" />
 							</td>
 						</tr>
@@ -224,6 +225,5 @@
 			document.getElementById("loginform").submit();
 		}
 	}
-				
 </script>
 </html>

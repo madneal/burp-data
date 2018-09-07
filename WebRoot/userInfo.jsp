@@ -51,8 +51,8 @@ tr {
 
 
 <!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
 <!-- Favicons
 	================================================== -->
@@ -62,24 +62,12 @@ tr {
 	href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="114x114"
 	href="images/apple-touch-icon-114x114.png" />
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-
-
 <base href="<%=basePath%>">
-
-
-
 </head>
-
-
 <body>
 	<div id="bodychild">
 		<div id="outercontainer">
-
 			<!-- HEADER -->
 			<div id="outerheader">
 				<div class="container">

@@ -1,9 +1,12 @@
 package com.vo;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
 /**
  * Users entity. @author MyEclipse Persistence Tools
  */
-
+// 1.2 xss
+// author: Dong Bing
 public class Users implements java.io.Serializable {
 
 	// Fields
@@ -55,7 +58,7 @@ public class Users implements java.io.Serializable {
 	}
 
 	public String getUserPhonenum() {
-		return this.userPhonenum;
+		return StringEscapeUtils.escapeHtml3(this.userPhonenum);
 	}
 
 	public void setUserPhonenum(String userPhonenum) {
@@ -71,7 +74,7 @@ public class Users implements java.io.Serializable {
 	}
 
 	public String getUserRealname() {
-		return this.userRealname;
+		return StringEscapeUtils.escapeHtml3(this.userRealname);
 	}
 
 	public void setUserRealname(String userRealname) {
@@ -79,7 +82,7 @@ public class Users implements java.io.Serializable {
 	}
 
 	public String getUserAddress() {
-		return this.userAddress;
+		return StringEscapeUtils.escapeHtml3(this.userAddress);
 	}
 
 	public void setUserAddress(String userAddress) {
@@ -87,7 +90,7 @@ public class Users implements java.io.Serializable {
 	}
 
 	public String getUserEmail() {
-		return this.userEmail;
+		return StringEscapeUtils.escapeHtml3(this.userEmail);
 	}
 
 	public void setUserEmail(String userEmail) {
@@ -103,7 +106,7 @@ public class Users implements java.io.Serializable {
 	}
 
 	public String getUserBusiness() {
-		return this.userBusiness;
+		return StringEscapeUtils.escapeHtml3(this.userBusiness);
 	}
 
 	public void setUserBusiness(String userBusiness) {

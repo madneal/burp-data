@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -14,6 +15,7 @@ import com.service.BusinessService;
 import com.service.UsersService;
 import com.util.CSRFProtectUtil;
 import com.vo.Users;
+import org.apache.commons.lang.StringEscapeUtils.*;
 
 @SuppressWarnings("serial")
 public class BusinessAction extends ActionSupport {
@@ -61,7 +63,7 @@ public class BusinessAction extends ActionSupport {
 		Users userInfo = (Users) usersService.findById(userId);
 		// get businessinfo by id
 //		userInfo.setUserBusiness(new String(request.getParameter("userBusiness").getBytes("GBK"),"utf-8"));
-		userInfo.setUserBusiness(userBusiness);
+		userInfo.setUserBusiness(StringEscapeUtils.escapeHtml(userBusiness));
 		usersService.modifyUsersBusiness(userInfo);
 		request.setAttribute("userList1", userInfo);
 		return "updatebusiness";
