@@ -209,7 +209,6 @@
 		document.getElementById("userBusiness").value = userBusiness;
 		document.getElementById("changeForm").action = "business!updateuserbusiness.action";
 		document.getElementById("changeForm").submit();
-
 	}
 </script>
 </html>

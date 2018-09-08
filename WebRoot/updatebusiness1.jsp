@@ -28,8 +28,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   ================================================== -->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1" />
-
-
 <!-- CSS
   ================================================== -->
 <link rel="stylesheet" href="styles/skeleton.css" />
@@ -37,8 +35,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link rel="stylesheet" href="styles/flexslider.css" />
 <link rel="stylesheet" href="styles/color.css" />
 <link rel="stylesheet" href="styles/layout.css" />
-
-
 <!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -51,24 +47,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	href="images/apple-touch-icon-72x72.png" />
 <link rel="apple-touch-icon" sizes="114x114"
 	href="images/apple-touch-icon-114x114.png" />
-
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-
-
-
 <base href="<%=basePath%>">
-
-
-
 </head>
-
-
 <body>
 	<div id="bodychild">
 		<div id="outercontainer">
-
 			<!-- HEADER -->
 			<div id="outerheader">
 				<div class="container">
@@ -97,14 +81,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</div>
 			</div>
 			<!-- END HEADER -->
-			<div
-				style="background: #EFEFEF;width: 930px; height: 430px;"
-				id="outerslider">
-
+			<div style="background: #EFEFEF;width: 930px; height: 430px;" id="outerslider">
 				<!-- SLIDER -->
-				<%
-		Users userlist = (Users) request.getAttribute("userList1");
-	%>
+				<% Users userlist = (Users) request.getAttribute("userList1"); %>
 				<s:form>
 					<h1 style="color: red;" align="center">修改套餐成功</h1>
 					<table>
@@ -136,9 +115,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<td>用户套餐</td>
 							<td><%=userlist.getUserBusiness()%></td>
 						</tr>
-
 					</table>
-
 				</s:form>
 
 				<!-- END SLIDER -->

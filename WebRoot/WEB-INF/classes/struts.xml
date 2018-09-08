@@ -41,6 +41,7 @@
  		<action name="business" class="businessAction">
 			<result name="selectAll">/updatebusiness.jsp</result>
 			<result name="updatebusiness">/updatebusiness1.jsp</result>
+			<result name="updatebusinessError">/updatebusinessError.jsp</result>
 		</action>
 
 		<action name="vaservice" class="com.action.ValueAddAction">

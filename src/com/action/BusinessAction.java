@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.vo.Business;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.struts2.ServletActionContext;
 
@@ -61,13 +62,26 @@ public class BusinessAction extends ActionSupport {
 				.toString());
 
 		Users userInfo = (Users) usersService.findById(userId);
+		if (!checkUserBusiness(userBusiness)) {
+			request.setAttribute("userList1", userInfo);
+			return "updatebusinessError";
+		}
 		// get businessinfo by id
 //		userInfo.setUserBusiness(new String(request.getParameter("userBusiness").getBytes("GBK"),"utf-8"));
-		userInfo.setUserBusiness(StringEscapeUtils.escapeHtml(userBusiness));
+		userInfo.setUserBusiness(userBusiness);
 		usersService.modifyUsersBusiness(userInfo);
 		request.setAttribute("userList1", userInfo);
 		return "updatebusiness";
+	}
 
+	private boolean checkUserBusiness(String userBusiness) {
+		List<Business> businessList = businessService.findAllBusiness();
+		for (Business business: businessList) {
+			if (business.getBusinessName().equals(userBusiness)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public BusinessService getBusinessService() {
@@ -101,7 +115,4 @@ public class BusinessAction extends ActionSupport {
 	public void setToken(String token) {
 		this.token = token;
 	}
-	
-	
-
 }

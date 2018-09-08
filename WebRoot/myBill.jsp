@@ -166,9 +166,10 @@
 					<table>
 						<tr>
 							<td><input type="button" value="上一页" onclick="lastBtn()" /></td>
-							<td colspan="8">第<input type="text" id="assginedPage"
-								value='<s:property value="#request.currentPage"/>' />页 <a
-								href="javascript:goToPage()" />GO</a></td>
+							<td colspan="8">第
+								<input type="text" id="assginedPage"
+								value='<s:property value="#request.currentPage"/>' />页
+								<a href="javascript:goToPage()">GO</a></td>
 							<td><input type="button" value="下一页" onclick="nextBtn()" /></td>
 							<td><s:select list="(10).{#this+1}" name="pageSize"
 									label="每页显示条数" onchange="changePageSize()"></s:select></td>
