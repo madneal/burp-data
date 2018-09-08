@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8f02fe-5671-4a03-8ea8-e26f4f294fa3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/action/ValueAddAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/WebRoot/WEB-INF/classes/com/action/ValueAddAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/vulgame/vulgame.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/vulgame/vulgame.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/action/UsersAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/action/UsersAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/util/CryptoUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/util/CryptoUtil.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/WebRoot/WEB-INF/classes/" />
@@ -34,23 +30,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="12" />
-          <entry key="java" value="27" />
+          <entry key="class" value="13" />
+          <entry key="java" value="30" />
           <entry key="jsp" value="17" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="12" />
-          <entry key="JAVA" value="27" />
+          <entry key="CLASS" value="13" />
+          <entry key="JAVA" value="30" />
           <entry key="JSP" value="17" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1454" />
+          <entry key="java" value="1817" />
           <entry key="jsp" value="30" />
           <entry key="txt" value="36" />
           <entry key="xml" value="20" />
@@ -58,7 +54,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1454" />
+          <entry key="JAVA" value="1817" />
           <entry key="JSP" value="30" />
           <entry key="PLAIN_TEXT" value="36" />
           <entry key="XML" value="20" />
@@ -68,6 +64,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/action/BusinessAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebRoot/userInfo.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,8 +88,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/action/UsersAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="459" column="48" selection-start-line="459" selection-start-column="48" selection-end-line="459" selection-end-column="48" />
+            <state relative-caret-position="-127">
+              <caret line="568" column="28" selection-start-line="568" selection-start-column="28" selection-end-line="568" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/vo/Items.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
+              <folding>
+                <element signature="e#823#824#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,6 +161,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/dao/BusinessDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="637">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -173,6 +202,7 @@
       <find>upload</find>
       <find>image</find>
       <find>fileName</find>
+      <find>非法的</find>
     </findStrings>
     <replaceStrings>
       <replace>\&lt;meta http\-equiv\=\&quot;Content\-Type\&quot; content\=\&quot;text\/html\; charset\=utf\-8\&quot; \/\&gt;\n\&lt;base href\=\&quot;\&lt;\%\=basePath\%\&gt;\&quot;\&gt;\n\n\n</replace>
@@ -302,7 +332,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536397419016" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536401645123" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -413,7 +443,7 @@
       <updated>1536242774379</updated>
       <workItem from="1536242776838" duration="169000" />
       <workItem from="1536315211523" duration="12973000" />
-      <workItem from="1536367819343" duration="11836000" />
+      <workItem from="1536367819343" duration="14039000" />
     </task>
     <task id="LOCAL-00001" summary="fix for sql injection 1.1">
       <created>1536317092950</created>
@@ -433,13 +463,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24978000" />
+    <option name="totallyTimeSpent" value="27181000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="203" width="1440" height="877" extended-state="0" />
+    <frame x="1440" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25608012" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19062833" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -448,8 +478,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32970297" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41140026" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4108911" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3108911" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -487,7 +517,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/action/UsersAction.java</url>
-          <line>380</line>
+          <line>381</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -535,9 +565,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/action/UsersAction.java</url>
-          <line>416</line>
+          <line>536</line>
           <properties />
-          <option name="timeStamp" value="11" />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -545,42 +575,47 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>valueAddService.findVaByid(vaid)</expression-string>
+        <expression-string>itemInfo.getPdenomination()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>valueAddService.findVaByid(vaid))</expression-string>
+        <expression-string>new BigDecimal(cost).multiply(new BigDecimal(100)).compareTo(new BigDecimal(dbcost))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>StringEscapeUtils.escapeHtml(userBusiness)</expression-string>
+        <expression-string>new BigDecimal(cost).multiply(new BigDecimal(100))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>getHibernateTemplate().find(queryString)</expression-string>
+        <expression-string>new BigDecimal(Double.parseDouble(cost)).multiply(new BigDecimal(100))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session.toString()</expression-string>
+        <expression-string>new BigDecimal(dbcost).compareTo(new BigDecimal(Double.parseDouble(cost)).multiply(new BigDecimal(100)))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session.getAttribute(session.toString())</expression-string>
+        <expression-string>new BigDecimal(dbcost).equals(new BigDecimal(Double.parseDouble(cost)).multiply(new BigDecimal(100)))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session.isNew()</expression-string>
+        <expression-string>new BigDecimal(dbcost).equals(new BigDecimal(Double.parseDouble(cost)*100))</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>session</expression-string>
+        <expression-string>cost</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>Double.parseDouble(cost)*100</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -770,13 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/dao/BusinessDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="118" column="16" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/dao/LockrecordDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1264">
@@ -836,13 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/ognl-3.0.19.jar!/ognl/OgnlRuntime.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="448" selection-start-line="448" selection-end-line="448" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/util/CryptoUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -861,16 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
           <caret line="116" column="15" selection-start-line="116" selection-start-column="15" selection-end-line="116" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/action/BusinessAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="53" column="24" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,10 +906,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/WebRoot/WEB-INF/lib/ognl-3.0.19.jar!/ognl/OgnlRuntime.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="448" selection-start-line="448" selection-end-line="448" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/dao/BusinessDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="637">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/action/BusinessAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/vo/Items.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#823#824#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/action/UsersAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="459" column="48" selection-start-line="459" selection-start-column="48" selection-end-line="459" selection-end-column="48" />
+        <state relative-caret-position="-127">
+          <caret line="568" column="28" selection-start-line="568" selection-start-column="28" selection-end-line="568" selection-end-column="28" />
         </state>
       </provider>
     </entry>

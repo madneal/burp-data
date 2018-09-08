@@ -14,6 +14,7 @@ import org.apache.struts2.ServletActionContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -530,6 +531,8 @@ public class UsersAction extends ActionSupport {
 	 * 处理支付请求
 	 * @return
 	 */
+	// there is a problem for double number compare
+	// author: Dong Bing
 	public String payOrder(){
 		HttpServletRequest request = ServletActionContext.getRequest();;
 		if (null == request.getSession().getAttribute("userId")) {
@@ -553,14 +556,18 @@ public class UsersAction extends ActionSupport {
 
 		Items itemInfo = (Items) usersService.getRechargeItemsByid(productId).get(0);
 		double dbcost = itemInfo.getPcost();
-		if(dbcost!=Double.parseDouble(cost)*100){
+//		if(dbcost!=Double.parseDouble(cost)*100){
+		if (new BigDecimal(dbcost).compareTo(new BigDecimal(cost).multiply(new BigDecimal(100))) != 0) {
 			flag =1;
 			request.setAttribute("errorMsg","非法的订单");
 			return "rechargeError";
 		}
 
 		Users users2 = (Users) usersService.findUserByUserPhonenum(telno).get(0);
-		users2.setUserBalance(users2.getUserBalance()+Double.parseDouble(cost));
+//		users2.setUserBalance(users2.getUserBalance()+Double.parseDouble(cost));
+		// logical error
+		// author: Dong Bing
+		users2.setUserBalance(users2.getUserBalance() + itemInfo.getPdenomination());
 		usersService.modifyUserBalance(users2);
 		request.setAttribute("orderId", orderId);
 		request.setAttribute("itemInfo", itemInfo);
