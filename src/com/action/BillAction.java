@@ -133,7 +133,7 @@ public class BillAction extends ActionSupport {
 			String relativeClassPath = "WEB-INF/classes/";
 			contextRealPath = absoluteClassPath.substring(0,absoluteClassPath.length()-relativeClassPath.length())
 					+ File.separator + REPORTS + File.separator ;
-		}else{
+		} else {
 			contextRealPath = contextRealPath + File.separator +REPORTS +File.separator;
 		}
 		File file = new File(contextRealPath);
@@ -383,6 +383,7 @@ public class BillAction extends ActionSupport {
 	public void setBill(Bill bill) {
 		this.bill = bill;
 	}
+
 	private boolean isAccessible(String filename, String userPhonenum) {
 
 		if (Misc.isEmpty(filename)) {
@@ -405,6 +406,5 @@ public class BillAction extends ActionSupport {
 			return true;
 		}
 		return false;
-
 	}
 }

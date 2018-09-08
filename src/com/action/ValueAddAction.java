@@ -48,7 +48,8 @@ public class ValueAddAction extends ActionSupport {
      * 办理增值业务
      * @return success
      */
-
+    // logical vulnerability
+    // should not pass value in the request parameters
     public String obtain(){
         HttpServletRequest httpServletRequest = ServletActionContext.getRequest();
         if(null == httpServletRequest.getSession().getAttribute("userId")){
@@ -61,12 +62,13 @@ public class ValueAddAction extends ActionSupport {
         String userid = (httpServletRequest.getSession().getAttribute("userId").toString());
         Users users = usersService.findById(userid);
         double userBalance = users.getUserBalance();
-        int cost =Integer.parseInt(httpServletRequest.getParameter("cost"));
+//        int cost =Integer.parseInt(httpServletRequest.getParameter("cost"));
+        String vaid = httpServletRequest.getParameter("id");
+        int cost = valueAddService.findVaByid(vaid).getVacost();
         if(userBalance<cost){
             flag=1;
             return "success";
         }
-        String vaid = httpServletRequest.getParameter("id");
         double userLastBalance = userBalance - cost;
         users.setUserBalance(userLastBalance);
         usersService.modifyUserBalance(users);

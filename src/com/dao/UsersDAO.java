@@ -63,14 +63,14 @@ public class UsersDAO extends HibernateDaoSupport {
 		       }
 	}
 	
-/**
- * 
- *
- * @param phone
- * @return
- */
+	/**
+	 *
+	 *
+	 * @param phone
+	 * @return
+	 */
 	public String  UserPhoneTest(String phone){
-		String hql="from Users  where userPhonenum=:userPhonenum  ";
+		String hql="from Users  where userPhonenum=:userPhonenum";
 		Query query=getSession().createQuery(hql);
 		query.setString("userPhonenum", phone);
 		
@@ -82,7 +82,7 @@ public class UsersDAO extends HibernateDaoSupport {
 	}
 
 	public String CheckUserPhone(String phone) {
-		String hql = "from Users  where userPhonenum=:userPhonenum  ";
+		String hql = "from Users  where userPhonenum=:userPhonenum";
 		Query query = getSession().createQuery(hql);
 		query.setString("userPhonenum", phone);
 
@@ -359,22 +359,17 @@ public class UsersDAO extends HibernateDaoSupport {
 		String hql = "from Items where id=?";
 		try{
 			return getSession().createQuery(hql).setParameter(0, id).list();
-
-		}catch (RuntimeException e){
+		} catch (RuntimeException e){
 			throw e;
 		}
 	}
 
 	public double findRechargeCostByid(int id){
 		String hql = "select Items.pcost from Items  where id=?";
-		try{
+		try {
 			return (double)(getSession().createQuery(hql).setParameter(0,id).uniqueResult());
-
-		}catch (RuntimeException e){
+		} catch (RuntimeException e){
 			throw e;
 		}
-
 	}
-
-
 }

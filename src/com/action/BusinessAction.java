@@ -50,7 +50,8 @@ public class BusinessAction extends ActionSupport {
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
-
+	// 1.2 xss
+	// author: Dong Bing
 	public String updateuserbusiness() throws UnsupportedEncodingException {
 
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -62,6 +63,7 @@ public class BusinessAction extends ActionSupport {
 				.toString());
 
 		Users userInfo = (Users) usersService.findById(userId);
+		// check userBusiness when update to avoid illegal input
 		if (!checkUserBusiness(userBusiness)) {
 			request.setAttribute("userList1", userInfo);
 			return "updatebusinessError";

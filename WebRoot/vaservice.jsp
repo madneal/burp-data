@@ -141,7 +141,7 @@
                     <td align="center"><%=vaEntry.getVadesc()%></td>
                     <td align="centre"><%=vaEntry.getVacost()%>元</td>
                     <td align="center">
-                        <a href="vaservice!obtain.action?id=<%=vaEntry.getId()%>&cost=<%=vaEntry.getVacost()%>&vaname=<%=vaEntry.getVaname()%>&token=<%=token%>">立即获得</a></td>
+                        <a href="vaservice!obtain.action?id=<%=vaEntry.getId()%>&vaname=<%=vaEntry.getVaname()%>&token=<%=token%>">立即获得</a></td>
                         <%--<a href="javascript:void(0)" onclick="getva('<%=vaEntry.getId()%>>')"></a></td>--%>
                 </tr>
                 <%
