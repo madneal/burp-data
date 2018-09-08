@@ -14,6 +14,7 @@ import org.apache.struts2.ServletActionContext;
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -409,13 +410,15 @@ public class UsersAction extends ActionSupport {
 	 * @return
 	 * @throws IOException
 	 */
+	// upload vulnerability
+	// author: Dong Bing
 	public String userAvarUpload() throws IOException {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		if (null == request.getSession().getAttribute("userId")) {
 			return "error";
 		}
 
-		if (null != uploadImage && uploadImage.length > 0) {
+		if (null != uploadImage && uploadImage.length > 0 && checkAvar(uploadImageFileName, uploadImageContentType)) {
 			FileProcessUitl up = new FileProcessUitl();
 			String path = up.processFileUpload(uploadPath, uploadImage,
 					uploadImageFileName, uploadImageContentType);
@@ -436,6 +439,26 @@ public class UsersAction extends ActionSupport {
 			imageflag = 1;
 			return findOneUserInfo();
 		}
+	}
+
+	// check both the imageFileName and imageContentType
+	private boolean checkAvar(String[] uploadImageFileName, String[] uploadImageContentType) {
+		boolean checkFilename = false;
+		boolean checkContentType = false;
+		String[] allowFilenames = {"jpg", "png"};
+		String[] allowContentTypes = {"image/jpeg", "image/png"};
+		for (String filename: uploadImageFileName) {
+			String extName = filename.substring(filename.indexOf(".") + 1);
+			if (Arrays.asList(allowFilenames).contains(extName)) {
+				checkFilename = true;
+			}
+		}
+		for (String contentType: uploadImageContentType) {
+			if (Arrays.asList(allowContentTypes).contains(contentType)) {
+				checkContentType = true;
+			}
+		}
+		return checkFilename && checkContentType;
 	}
 
 	/**
