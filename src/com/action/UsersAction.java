@@ -136,7 +136,6 @@ public class UsersAction extends ActionSupport {
 	 * @return
 	 */
 	public String findpwdTwo() {
-
 		HttpServletRequest request = ServletActionContext.getRequest();
 		// 1.check whether user in session first
 		String findpwdUserPhonenum = (String) request.getSession()

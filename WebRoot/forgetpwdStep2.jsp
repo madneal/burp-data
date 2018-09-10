@@ -69,15 +69,8 @@
 		document.getElementById("form").submit();
 	}
 </script>
-
-
 <base href="<%=basePath%>">
-
-
-
 </head>
-
-
 <body>
 	<div id="bodychild">
 		<div id="outercontainer">

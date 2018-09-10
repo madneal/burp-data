@@ -258,6 +258,7 @@ public class VerifyCodeUtils{
 		}
 
 	}
+
 	public static void main(String[] args) throws IOException{
 		File dir = new File("F:/verifies");
 		int w = 200, h = 80;
