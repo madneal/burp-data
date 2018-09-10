@@ -49,6 +49,7 @@ public class ValueAddAction extends ActionSupport {
      * @return success
      */
     // logical vulnerability
+    // author: Dong Bing
     // should not pass value in the request parameters
     public String obtain(){
         HttpServletRequest httpServletRequest = ServletActionContext.getRequest();

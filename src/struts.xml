@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
   <struts>
   	<!-- 高版本开启动态调用 -->
   	<constant name="struts.enable.DynamicMethodInvocation" value="true" ></constant>
@@ -8,7 +8,7 @@
 	<constant name="objectFactory" value="spring"></constant>
     <constant name="struts.i18n.encoding" value="utf-8" />
 	
-	<package name="struts" extends="struts-default" namespace="/">
+	<package name="struts" extends="struts-default" namespace="/" strict-method-invocation="false">
 
  
  		<action name="bill" class="billAction">

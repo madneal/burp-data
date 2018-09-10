@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN" "http://struts.apache.org/dtds/struts-2.5.dtd">
+  <struts>
+  	<!-- 高版本开启动态调用 -->
+  	<constant name="struts.enable.DynamicMethodInvocation" value="true" ></constant>
+	<!-- 防止Struts2 的 FilterDispatcher 和 自定义过滤器引发冲突 -->
+	<constant name="struts.action.extension" value="action"></constant>
+	<constant name="objectFactory" value="spring"></constant>
+    <constant name="struts.i18n.encoding" value="utf-8" />
+	
+	<package name="struts" extends="struts-default" namespace="/" strict-method-invocation="false">
+
+ 
+ 		<action name="bill" class="billAction">
+			<result name="bills">/myBill.jsp</result>
+			<!-- *****************added by lan***************** -->
+			<result name="error">/index.jsp</result>
+			<!-- *****************added by lan***************** -->
+		</action>
+ 
+ 		<action name="user" class="usersAction">
+			<result name="oneUser">/userInfo.jsp</result>
+			<result name="error">/index.jsp</result>
+<!-- 			<result name="wrong">/error.jsp</result> -->
+			<!-- *****************added by lan***************** -->
+			<result name="step1">/forgetpwdStep1.jsp</result>
+			<result name="step2">/forgetpwdStep2.jsp</result>
+			<result name="step3">/forgetpwdStep3.jsp</result>
+			<result name="step4">/forgetpwdStep4.jsp</result>
+			<!-- *****************added by lan***************** -->
+
+			<!--话费充值-->
+			<result name="recharge">/recharge.jsp</result>
+			<result name="rechargeError">/rechargeError.jsp</result>
+			<result name="recharge1">/recharge1.jsp</result>
+			<result name="paySuccess">/recharge2.jsp</result>
+			<!--<result name="paySuccess"></result>-->
+		</action>
+ 
+ 
+ 		<action name="business" class="businessAction">
+			<result name="selectAll">/updatebusiness.jsp</result>
+			<result name="updatebusiness">/updatebusiness1.jsp</result>
+		</action>
+
+		<action name="vaservice" class="com.action.ValueAddAction">
+			<result name="initva">/vaservice.jsp</result>
+			<result name="success">/vaservice1.jsp</result>
+			<result name="error">/index.jsp</result>
+		</action>
+		
+  </package>
+	
+</struts>    
