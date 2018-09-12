@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringEscapeUtils;
 /**
  * Users entity. @author MyEclipse Persistence Tools
  */
-// 1.2 xss
+// 2.1 xss
 // author: Dong Bing
 public class Users implements java.io.Serializable {
 
