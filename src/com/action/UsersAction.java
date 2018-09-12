@@ -410,7 +410,7 @@ public class UsersAction extends ActionSupport {
 	 * @return
 	 * @throws IOException
 	 */
-	// upload vulnerability
+	// 3.1 upload vulnerability
 	// author: Dong Bing
 	public String userAvarUpload() throws IOException {
 		HttpServletRequest request = ServletActionContext.getRequest();
@@ -530,6 +530,7 @@ public class UsersAction extends ActionSupport {
 	 * 处理支付请求
 	 * @return
 	 */
+	// 4.1 logical error
 	// there is a problem for double number compare
 	// author: Dong Bing
 	public String payOrder(){
@@ -564,7 +565,7 @@ public class UsersAction extends ActionSupport {
 
 		Users users2 = (Users) usersService.findUserByUserPhonenum(telno).get(0);
 //		users2.setUserBalance(users2.getUserBalance()+Double.parseDouble(cost));
-		// logical error
+		// 4.2 logical error
 		// author: Dong Bing
 		users2.setUserBalance(users2.getUserBalance() + itemInfo.getPdenomination());
 		usersService.modifyUserBalance(users2);
