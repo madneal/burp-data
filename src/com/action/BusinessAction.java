@@ -48,7 +48,7 @@ public class BusinessAction extends ActionSupport {
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
-	// 1.2 xss
+	// 2.2 xss
 	// author: Dong Bing
 	public String updateuserbusiness() throws UnsupportedEncodingException {
 
