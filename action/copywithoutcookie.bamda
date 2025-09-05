@@ -1,0 +1,23 @@
+  try {
+      var httpService = requestResponse.httpService();
+      String protocol = httpService.secure() ? "https" : "http";
+      String host = httpService.host();
+      int port = httpService.port();
+      
+      var result = requestResponse.request().withRemovedHeader("Authorization").withRemovedHeader("Cookie").toString();
+      
+      
+      java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new java.awt.datatransfer.StringSelection(result), null);
+      
+      logging.logToOutput("Successfully copied request data to clipboard");
+      
+  } catch (Exception e) {
+      try {
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new java.awt.datatransfer.StringSelection(""), null);
+      } catch (Exception clipboardError) {
+          logging.logToError("Failed to clear clipboard: " + clipboardError.getMessage());
+      }
+      
+      logging.logToError("Error processing request: " + e.getMessage());
+      e.printStackTrace();
+  }
