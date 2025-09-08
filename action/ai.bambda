@@ -1,84 +1,34 @@
-if (requestResponse.request().url() != null && requestResponse.hasResponse()) {
-    if (requestResponse.annotations().hasNotes()) {
-        String notes = requestResponse.annotations().notes();
+/**
+ * Test raw HTTP with httpbin.org to verify the approach works
+ */
 
-        if (notes.contains("aaa")) {
-            // Use pathWithoutQuery() to get the path part of the URL without the query string By CoreyD97
-            String path = requestResponse.request().pathWithoutQuery();
+// Test with httpbin.org first
+var httpService = HttpService.httpService("httpbin.org", 443, true);
 
-            // Construct the curl command with headers
-            String command = "curl https://api.openai.com/v1/chat/completions -H \"Content-Type: application/json\" -H \"Authorization: Bearer XYZ\" -d \"{\\\"model\\\": \\\"gpt-3.5-turbo\\\", \\\"messages\\\": [{\\\"role\\\": \\\"user\\\", \\\"content\\\": \\\"Based on the specified path in an HTTP request, please guess 50 potential endpoints. " + path + "\\\"}], \\\"temperature\\\": 0.7}\"";
+var jsonBody = """
+{
+"test": "data",
+"user": "example"
+}""";
 
-            // Determine the operating system By JaveleyQAQ
-            String os = System.getProperty("os.name").toLowerCase();
-            String[] commandArray;
-            String filePath;
-            String endpointsPath;
+var contentLength = jsonBody.getBytes("UTF-8").length;
 
-            if (os.contains("win")) {
-                // Windows command and paths
-                commandArray = new String[]{"cmd", "/c", command};
-                filePath = "C:\\Users\\User\\Path\\httpRequest.txt"; // Corrected path
-                endpointsPath = "C:\\Users\\User\\Path\\endpoints.txt"; // Corrected path
-            } else {
-                // Unix/Linux/macOS command and paths
-                commandArray = new String[]{"/bin/bash", "-c", command};
-                filePath = "/home/kali/Desktop/httpRequest.txt"; // Path for Linux/macOS
-                endpointsPath = "/home/kali/Desktop/endpoints.txt"; // Path for Linux/macOS
-            }
+var rawHttpRequest = "POST /post HTTP/1.1\r\n" +
+                     "Host: httpbin.org\r\n" +
+                     "Content-Type: application/json\r\n" +
+                     "Accept: application/json\r\n" +
+                     "Content-Length: " + contentLength + "\r\n" +
+                     "\r\n" +
+                     jsonBody;
 
-            // Write the command to a file
-            try (BufferedWriter commandWriter = new BufferedWriter(new FileWriter(filePath))) {
-                commandWriter.write(command);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+var requestBytes = ByteArray.byteArray(rawHttpRequest);
+var httpRequest = HttpRequest.httpRequest(httpService, requestBytes);
+var response = api().http().sendRequest(httpRequest);
 
-            // Execute the curl command using the appropriate shell
-            ProcessBuilder processBuilder = new ProcessBuilder(commandArray);
-            processBuilder.redirectErrorStream(true);
-            Process process = null;
-            try {
-                process = processBuilder.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            // Read the output from the command
-            StringBuilder output = new StringBuilder();
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    output.append(line).append("\n");
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            // Extract the JSON part of the response
-            String jsonResponse = output.toString();
-            String contentMarker = "\"content\": \"";
-            int contentStart = jsonResponse.indexOf(contentMarker);
-            if (contentStart != -1) {
-                contentStart += contentMarker.length();
-                int contentEnd = jsonResponse.indexOf("\"", contentStart);
-                if (contentEnd != -1) {
-                    String content = jsonResponse.substring(contentStart, contentEnd).replace("\\n", "\n");
-
-                    // Write the endpoints to a file
-                    try (BufferedWriter endpointWriter = new BufferedWriter(new FileWriter(endpointsPath))) {
-                        endpointWriter.write(content);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-
-            // Highlight the request/response in yellow
-            requestResponse.annotations().setHighlightColor(HighlightColor.YELLOW);
-            return true;
-        }
-    }
+logging.logToOutput("HTTPBin test completed");
+if (response.response() != null) {
+    logging.logToOutput("HTTPBin Status: " + response.response().statusCode());
+    logging.logToOutput("HTTPBin Response: " + response.response().bodyToString());
+} else {
+    logging.logToOutput("HTTPBin test also failed - network issue");
 }
-
-return false;
