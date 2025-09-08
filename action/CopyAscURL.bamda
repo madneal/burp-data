@@ -1,8 +1,4 @@
-/**
-   * Convert the request to a cURL command, copying the command to the clipboard.
-   *
-   * @author 0xd0ug (https://github.com/0xd0ug)
-**/
+
 
 var request = requestResponse.request();
 
