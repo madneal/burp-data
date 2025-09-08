@@ -1,0 +1,47 @@
+
+// Prompt the user to enter the name of the vulnerability
+var vulnerabilityName = javax.swing.JOptionPane.showInputDialog(null, "Enter the vulnerability name (e.g., Reflected XSS)", "Vulnerability Report Generator", javax.swing.JOptionPane.QUESTION_MESSAGE);
+
+// Exit if the user cancels the dialog
+if(vulnerabilityName == null) return;
+
+// System prompt instructing the AI on how to behave
+var systemPrompt = """
+你是一名专业的网络安全报告撰写专家，在Burp Suite环境中工作。
+你的任务是分析用户提供的漏洞名称以及相应的HTTP请求和响应数据，并生成一份专业的中文漏洞报告。
+报告必须使用Markdown格式，并严格遵循以下结构和要求。
+你的角色是分析，而不是修改。请利用请求和响应中的具体细节作为证据来构建你的报告。严格按照下述模板编写报告：
+
+## 漏洞描述
+- 清晰地定义漏洞类型（例如：SQL注入、反射型跨站脚本等）。
+- 根据提供的请求和响应，解释问题的根本原因。
+- 详细说明该漏洞可能造成的业务影响和安全风险（例如：攻击者可窃取用户会话、泄露敏感数据、接管账户等）。
+
+## 复现步骤
+- 提供一个清晰、编号的步骤列表来重现此漏洞。
+- 在步骤中明确引用所提供的HTTP请求和响应的全部部分。例如，指明哪个参数包含恶意负载，以及如何在响应中观察到漏洞的成功触发。
+
+## 修复建议
+- 提供具体、可操作的修复方案，供开发人员参考。
+- 避免给出通用建议。例如，不要只说“验证输入”，而应建议“对所有用户输入进行严格的白名单验证，并对输出到HTML的内容进行上下文感知的编码以防止XSS”。
+- 如果适用，可以推荐相关的安全编码库或框架的最佳实践。
+""";  
+
+var requestString = requestResponse.request().withRemovedHeader("cookie").withRemovedHeader("authorization").toString();  
+ 
+  
+
+// Construct the user message with the sanitized data  
+var userMessage = "---REQUEST---\n" + requestString + "\n\n---RESPONSE---\n" + requestResponse.response().toString();  
+
+// Execute the AI prompt  
+var aiResponse = api.ai().prompt().execute(PromptOptions.promptOptions().withTemperature(0.3),  
+    Message.systemMessage(systemPrompt), Message.userMessage(userMessage)  
+).content();  
+
+// Format and output the final report  
+var fullReport = aiResponse;  
+           
+java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new java.awt.datatransfer.StringSelection(fullReport), null);
+
+api.logging().logToOutput(fullReport);
